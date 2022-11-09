@@ -181,18 +181,27 @@ namespace Singly_linked_list
                                 }
                                 break;
                             }
-                           
-                                }
+                            Node previous, current;
+                            previous = current = null;
+                            Console.Write("\nMasukkan nomor mahasiswa yang akan dicari: ");
+                            int num = Convert.ToInt32(Console.ReadLine());
+                            if (obj.Search(num, ref previous, ref current) == false)
+                                Console.WriteLine("\nData tidak ditemukan, ");
+                            else
+                            {
+                                Console.WriteLine("\nData ketemu");
+                                Console.WriteLine("\nNomor Mahasiswa: " + current.noMhs);
+                                Console.WriteLine("\nNama: " + current.nama);
+                            }
+                            break;
+                        case '5':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine("\nPilihan tidak valid");
+                                break;
                             }
 
                     }
                 }
-            }
-        }
-    }
-}
-
-
-
-        
-       
+                cat
