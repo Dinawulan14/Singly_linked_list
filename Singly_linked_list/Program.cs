@@ -29,7 +29,15 @@ namespace Singly_linked_list
             nodeBaru.noMhs = nim;
             nodeBaru.nama = nm;
 
+            if (START == null || nim <= START.noMhs)
+            {
+                if ((START != null) && (nim == START.noMhs))
+                {
+                    Console.WriteLine("\nNomer mahasiswa sama tidak diijinkan");
+                    return;
+                }
 
+            }
         }
     }
 }
